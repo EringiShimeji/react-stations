@@ -24,13 +24,23 @@ export const App = () => {
 
   return (
     <>
-      <header className="app__header">Dogアプリ</header>
+      <header className="app__header">Dog アプリ</header>
       <main className="app__main">
-        <p>犬の画像を表示するサイトです。</p>
-        <img className="app__dog-img" src={dogUrl} alt="dog picture" />
-        <button className="app__change-dog-button" onClick={handleClick}>
-          別の画像を表示する
-        </button>
+        <div className="app__gallery">
+          <div className="app__preview">
+            <div className="app__description">
+              <p>犬の画像を表示するサイトです。</p>
+            </div>
+            <div className="app__dog-img-container">
+              <img className="app__dog-img" src={dogUrl} alt="dog picture" />
+            </div>
+          </div>
+          <div className="app__controller">
+            <button className="app__change-dog-button" onClick={handleClick}>
+              更新
+            </button>
+          </div>
+        </div>
       </main>
     </>
   )
