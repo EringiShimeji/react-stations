@@ -44,6 +44,31 @@ module.exports = {
         allow: ['_'],
       },
     ],
+
+    // 以下オリジナルのルール
+    'react/self-closing-comp': 'error',
+    'sort-imports': 'off',
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'type',
+          'builtin',
+          'external',
+          'internal',
+          'unknown',
+          'parent',
+          'sibling',
+          'index',
+          'object',
+        ],
+        'newlines-between': 'never',
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true,
+        },
+      },
+    ],
   },
   settings: {
     react: {
@@ -55,4 +80,4 @@ module.exports = {
       },
     },
   },
-}
+};

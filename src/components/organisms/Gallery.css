@@ -1,0 +1,7 @@
+.gallery-container {
+  width: 100%;
+  margin: 3vh 5vh;
+
+  display: flex;
+  flex-direction: row;
+}
