@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import DogImage from './DogImage'
+import { DogImage } from './DogImage'
 
 const Description = () => {
   const [dogUrl, setDogUrl] = useState(
@@ -31,4 +31,4 @@ const Description = () => {
   )
 }
 
-export default Description
+export { Description }

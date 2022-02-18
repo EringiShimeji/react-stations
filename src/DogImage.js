@@ -16,4 +16,4 @@ DogImage.propTypes = {
   url: PropTypes.string.isRequired,
 }
 
-export default DogImage
+export { DogImage }
