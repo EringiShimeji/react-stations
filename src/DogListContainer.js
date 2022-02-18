@@ -18,7 +18,7 @@ const DogListContainer = () => {
     if (!selectedBreed) return
 
     const apiResponse = await fetch(
-      `https://dog.ceo/api/breed/${selectedBreed}/images/random/3`,
+      `https://dog.ceo/api/breed/${selectedBreed}/images/random/12`,
     ).then(r => r.json())
 
     if (apiResponse.status !== 'success') return
@@ -52,10 +52,18 @@ const DogListContainer = () => {
         selectedBreed={selectedBreed}
         onChange={handleBreedsSelectChange}
       />
-      <button onClick={handleClick}>表示</button>
-      <div className="dog-list-container__breed-img-container">
+      <button className="dog-list-container__button" onClick={handleClick}>
+        表示
+      </button>
+      <div className="dog-list-container__img-container">
         {certainBreedUrls.map(url => (
-          <img key={url} src={url} alt={`${selectedBreed} image`} />
+          <div key={url} className="dog-list-container__img-wrapper">
+            <img
+              className="dog-list-container__img"
+              src={url}
+              alt={`${selectedBreed} image`}
+            />
+          </div>
         ))}
       </div>
     </div>
