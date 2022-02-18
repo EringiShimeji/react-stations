@@ -19,4 +19,4 @@ const DogListContainer = () => {
   return <div />
 }
 
-export default DogListContainer
+export { DogListContainer }
