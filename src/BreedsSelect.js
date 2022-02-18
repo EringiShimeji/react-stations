@@ -29,4 +29,4 @@ BreedsSelect.propTypes = {
   onChange: PropTypes.func.isRequired,
 }
 
-export default BreedsSelect
+export { BreedsSelect }
